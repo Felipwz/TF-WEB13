@@ -7,7 +7,10 @@ export default (request, response, next) => {
             .json({ error: 'Arquivo não enviado' });
     }
 
-    /** CODAR AQUI */
+    const ext = path.extname(req.file.originalname).toLowerCase();
+       if (ext !== '.pdf') {
+        return res.status(400).json({ message: 'Apenas arquivos PDF são permitidos.' });
+  }
 
     next();
 
