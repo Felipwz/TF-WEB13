@@ -1,68 +1,92 @@
-# Unifaat :: Devweb :: Aula 13 - TF
+# 📝 TF-WEB13 - To-Do List Full Stack  
 
-## Instalação e Execução
+Um projeto full stack de lista de tarefas desenvolvido com **React (frontend)**, **Node.js + Express (backend)** e **MongoDB**.  
 
-### Siga os passos abaixo para rodar o projeto via Docker:
+![React](https://img.shields.io/badge/React-18.2.0-blue)  
+![Node.js](https://img.shields.io/badge/Node.js-20.11.0-green)  
+![Express](https://img.shields.io/badge/Express-4.18.2-lightgrey)  
+![MongoDB](https://img.shields.io/badge/MongoDB-7.0.0-brightgreen)  
 
-1. Clonar o repositório:
-
-   ```sh
-   git clone https://github.com/luan-tavares/unifaat-devweb-aula13-tf
-   ```
-
-2. Entrar na pasta do projeto:
-
-   ```sh
-   cd unifaat-devweb-aula13-tf
-   ```
-
-3. Criar o arquivo `.env` na raiz do projeto copiando o .env.example:
-
-   > No windows:
-
-   ```ini
-   copy .env.example .env
-   ```
-
-   > No linux
-
-   ```ini
-   cp .env.example .env
-   ```
-4. Abrir o arquivo .env recém criado e preencher os campos abaixo:
-
-```sh
-POSTGRES_USER=meu_usuario
-POSTGRES_PASSWORD=minha_senha
-JWT_SECRET=super_secreta
+## 🚀 Demonstração  
+*(Adicione uma imagem ou GIF da aplicação rodando. Exemplo:)*  
+```markdown
+![Preview](https://via.placeholder.com/600x400?text=To-Do+List+Preview)
 ```
 
-5. Subir a aplicação com Docker Compose:
+## 🔧 Funcionalidades  
+- ✅ Adicionar, editar e excluir tarefas  
+- ✅ Marcar tarefas como concluídas  
+- ✅ Armazenamento persistente no MongoDB  
+- ✅ Interface responsiva  
 
-   ```sh
-   docker compose up --build
-   ```
+## ⚙️ Pré-requisitos  
+- Node.js (v20 ou superior)  
+- MongoDB (local ou [Atlas](https://www.mongodb.com/atlas))  
+- NPM ou Yarn  
 
-   > ou, dependendo da versão do Docker:
-   >
-   > - Usuários com versões **mais antigas** ou com Docker Compose instalado separadamente usam:
+## 🛠️ Configuração  
 
-   ```sh
-   docker-compose up --build
-   ```
+### 1. Backend (Node.js + Express)  
+```bash
+cd backend
+npm install
+```
 
-   > - Usuários com **Docker moderno** devem usar:
+Crie um arquivo `.env` na pasta `backend` com:  
+```env
+MONGODB_URI=sua_string_de_conexao_mongodb
+PORT=5000
+```
 
-   ```sh
-   docker compose up --build
-   ```
+Inicie o servidor:  
+```bash
+npm start
+```
 
-6. Criar os usuários acessando essa rota:
+### 2. Frontend (React)  
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-   [http://localhost:8080/criar-usuarios](http://localhost:8080/criar-usuarios)
+## 📂 Estrutura do Projeto  
+```
+TF-WEB13/  
+├── backend/  
+│   ├── config/        # Configurações do banco  
+│   ├── controllers/   # Lógica das rotas  
+│   ├── models/        # Schemas do Mongoose  
+│   ├── routes/        # Endpoints da API  
+│   └── server.js      # Ponto de entrada  
+└── frontend/  
+    ├── public/        # Assets estáticos  
+    ├── src/  
+    │   ├── components/ # Componentes React  
+    │   ├── App.jsx     # Componente principal  
+    │   └── main.jsx    # Renderização do app  
+    └── vite.config.js  # Configuração do Vite  
+```
 
-O servidor estará disponível em: [http://localhost:8080](http://localhost:8080)
+## 🤝 Como Contribuir  
+1. Faça um **fork** do projeto.  
+2. Crie uma branch:  
+```bash
+git checkout -b feat/nova-funcionalidade
+```  
+3. Commit suas mudanças:  
+```bash
+git commit -m "feat: adiciona nova funcionalidade"
+```  
+4. Envie para o repositório remoto:  
+```bash
+git push origin feat/nova-funcionalidade
+```  
+5. Abra um **Pull Request**.  
 
-Documentação api: [http://localhost:8080/docs](http://localhost:8080/docs)
+## 📄 Licença  
+MIT  
 
-Observação: ./Insomnia.yml DEVE utilizado no insomnia
+---  
+
+[Felipwz](https://github.com/Felipwz)  
