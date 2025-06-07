@@ -1,17 +1,16 @@
 import path from 'path';
 
-export default (request, response, next) => {
+export default (req, res, next) => {
+  const arquivo = req.files?.documento;
 
-    if (!request.files || !request.files.documento) {
-        return response.status(CONSTANTS.HTTP.BAD_REQUEST)
-            .json({ error: 'Arquivo não enviado' });
-    }
-
-    const ext = path.extname(req.file.originalname).toLowerCase();
-       if (ext !== '.pdf') {
-        return res.status(400).json({ message: 'Apenas arquivos PDF são permitidos.' });
+  if (!arquivo) {
+    return res.status(400).json({ error: 'Arquivo não enviado' });
   }
 
-    next();
+  const ext = path.extname(arquivo.name).toLowerCase();
+  if (ext !== '.pdf') {
+    return res.status(400).json({ message: 'Apenas arquivos PDF são permitidos.' });
+  }
 
-}
+  next();
+};
