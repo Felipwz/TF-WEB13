@@ -7,11 +7,6 @@ Um projeto full stack de lista de tarefas desenvolvido com **React (frontend)**,
 ![Express](https://img.shields.io/badge/Express-4.18.2-lightgrey)  
 ![MongoDB](https://img.shields.io/badge/MongoDB-7.0.0-brightgreen)  
 
-## 🚀 Demonstração  
-*(Adicione uma imagem ou GIF da aplicação rodando. Exemplo:)*  
-```markdown
-![Preview](https://via.placeholder.com/600x400?text=To-Do+List+Preview)
-```
 
 ## 🔧 Funcionalidades  
 - ✅ Adicionar, editar e excluir tarefas  
